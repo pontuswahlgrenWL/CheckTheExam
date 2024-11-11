@@ -4,6 +4,9 @@ public class Kata {
     {
         var points = 0;
         for (int i = 0; i < arr1.Length; i++) {
+            if(arr2[i] == "") {
+                continue;
+            }
             if(arr1[i] == arr2[i]) {
                 points += 4;
             } else {
