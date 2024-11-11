@@ -10,4 +10,11 @@ public class UnitTest1
         var result = Kata.CheckExam(["a"], ["b"]);
         Assert.Equal(0, result);
     }
+
+    [Fact (DisplayName = "Elev skickar in endast ett svar som är korrekt. Returnerar 4.")]
+    public void OneRightAnswer_ShouldReturnFour()
+    {
+        var result = Kata.CheckExam(["a"], ["a"]);
+        Assert.Equal(4, result);
+    }
 }
