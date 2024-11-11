@@ -17,4 +17,11 @@ public class UnitTest1
         var result = Kata.CheckExam(["a"], ["a"]);
         Assert.Equal(4, result);
     }
+
+    [Fact (DisplayName = "Elev skickar in två svar, varav ett är korrekt och ett felaktigt. Returnerar 3.")]
+    public void OneRightAndOneWrongAnswer_ShouldReturnThree()
+    {
+        var result = Kata.CheckExam(["a", "b"], ["a", "a"]);
+        Assert.Equal(3, result);
+    }
 }
